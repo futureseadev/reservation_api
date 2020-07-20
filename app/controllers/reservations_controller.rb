@@ -1,9 +1,8 @@
 class ReservationsController < ApplicationController
   def create
-    if new_reservation.valid? && new_reservation.save!
+    if new_reservation.valid? && new_reservation.save
       render json: ReservationSerializer.new(new_reservation).serialized_json, status: :created
     else
-      puts new_reservation.errors.inspect
       render json: { errors: new_reservation.errors }, status: :unprocessable_entity
     end
   end
@@ -39,6 +38,6 @@ class ReservationsController < ApplicationController
                 User.find(user_id)
               else
                 User.create(create_reservation_params[:user])
-            end
+              end
   end
 end
