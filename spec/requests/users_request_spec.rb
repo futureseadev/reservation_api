@@ -5,7 +5,6 @@ RSpec.describe 'Users', type: :request do
     user_params = attributes_for(:user)
     headers = { 'ACCEPT' => 'application/json' }
     post '/users', params: { user: user_params }, headers: headers
-    puts response.body
     expect(response).to have_http_status(:created)
   end
 
