@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+*** Required Ruby version ***
+2.7.1
 
-Things you may want to cover:
+To get this project running you need to have Ruby 2.7.1.
 
-* Ruby version
+Then run
 
-* System dependencies
+  [ ] `bundle install`
 
-* Configuration
+  [ ] `bundle exec rake db:create`
 
-* Database creation
+  [ ] `bundle exec rake db:migrate`
 
-* Database initialization
+  commands in the terminal.
 
-* How to run the test suite
+*** Running Tests ***
 
-* Services (job queues, cache servers, search engines, etc.)
+ run
 
-* Deployment instructions
+  [ ] `RAILS_ENV=test rake db:create db:migrate`
 
-* ...
+  [ ] `bundle exec rspec spec/`
