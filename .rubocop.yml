@@ -35,3 +35,5 @@ Style/Documentation:
   Enabled: false
 Metrics/BlockLength:
   Enabled: false
+RSpec/ExampleLength:
+  Enabled: false

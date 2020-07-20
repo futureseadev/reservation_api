@@ -11,4 +11,5 @@
 #  updated_at  :datetime         not null
 #
 class Vehicle < ApplicationRecord
+  has_many :reservations
 end
